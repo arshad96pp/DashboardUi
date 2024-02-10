@@ -1,0 +1,27 @@
+.app-Layout{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 40px 180px;
+    gap: 30px;
+    background-color:#F6F6F6 ;
+
+}
+
+.layout{
+    width: 100%;
+    height: auto;
+}
+
+
+
+@media(max-width:600px){
+    .app-Layout{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 40px 10px;
+        gap: 30px;
+        background-color:#F6F6F6 ;
+    }
+}

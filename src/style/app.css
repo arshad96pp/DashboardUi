@@ -1,0 +1,7 @@
+@import 'partials/header.css';
+@import 'partials/main.css';
+@import './partials/sidebar.css';
+@import 'partials/home.css';
+@import './partials/profileCard.css';
+@import './partials/userListCard.css';
+@import './partials/profilePage.css';

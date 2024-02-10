@@ -1,0 +1,50 @@
+.page-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.profile-row {
+  flex: 2;
+  height: auto;
+}
+
+
+/* users  */
+.users-card-row {
+  flex: 1;
+}
+
+
+.policy-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.policy-list li{
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.policy-icons{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+.policy-icons img{
+  width: 25px;
+}
+.policy-icons h4{
+  font-size: 12px;
+  font-weight: bold;
+  color: #9A9A9A;
+}
+
+/* make responsive */
+@media(max-width:600px){
+.users-card-row {
+  display: none;
+  }
+}

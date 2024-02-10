@@ -1,0 +1,215 @@
+.main-sidebar {
+  width: 280px;
+  height: 100%;
+}
+
+.isOpenSidebar{
+  width: 280px;
+  height: 100%;
+}
+.sidebar {
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.image-user {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  margin-bottom: 10px;
+}
+.image-user img {
+  width: 100%;
+}
+
+.sidebar-destails {
+  margin-bottom: 30px;
+}
+.sidebar-destails h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.sidebar-destails h2 {
+  margin-bottom: 10px;
+  font-size: 17px;
+  color: #676767;
+}
+
+.view-profile h3 {
+  font-size: 12px;
+  color: #9A9A9A;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+}
+.view-profile .MuiSvgIcon-root{
+  font-size: 20px !important;
+}
+
+.links-section {
+  margin-bottom: 20px;
+  height: auto;
+}
+.links-section li {
+  margin-bottom: 20px;
+  padding: 15px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: bolder;
+  color: #9A9A9A;
+  transition: all 0.5s ease-in-out;
+}
+.links-section li:hover{
+  background-color: #eb8fbd;
+  color: black;
+}
+.links-section li .MuiSvgIcon-root{
+  transition: all 0.5s ease-in-out;
+
+}
+.links-section li:hover > .MuiSvgIcon-root{
+  color: #f01984 !important;
+
+}
+.links-section .ActiveMenu{
+  background-color: #eb8fbd;
+  color: black;
+}
+.ActiveMenu .MuiSvgIcon-root{
+  color: #f01984 !important;
+}
+
+
+
+.download-section{
+  width: 100%;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.download-section h1{
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.download-section p{
+  font-size: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+
+}
+
+.download-image{
+  margin-top: 10px;
+}
+.download-image img{
+  width: 188px;
+}
+
+
+.id-based-contant{
+  width: 100%;
+  border-radius: 10px;
+
+}
+
+.sidebar-policy-list{
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+
+}
+.sidebar-policy-list li{
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.sidebar-policy-icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.sidebar-policy-icons img{
+  width: 20px;
+}
+.sidebar-policy-icons h4{
+  font-size: 10px;
+}
+
+
+/* make responsive */
+@media(max-width:600px){
+  .main-sidebar{
+    display: block;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    top: 0;
+    left:-1000px;
+    bottom: 0;
+    overflow-y: scroll;
+  }
+  .isOpenSidebar{
+    padding: 10px;
+    width: 210px;
+    display: block;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    top: 0;
+    left:0px;
+    bottom: 0;
+    overflow-y: scroll;
+  }
+
+  .sidebar-destails h3 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .sidebar-destails h2 {
+    margin-bottom: 10px;
+    font-size: 14px;
+  
+  }
+  
+  .view-profile h3 {
+    font-size: 12px;
+    color: #9A9A9A;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+  }
+  .id-based-contant{
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+  
+  }
+  .download-section{
+    width: 100%;
+    background: #ffffff;
+ 
+    margin-top: 100px;
+  }
+  .download-image img{
+    width: 138px;
+  }
+  
+}
