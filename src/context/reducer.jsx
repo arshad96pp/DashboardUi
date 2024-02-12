@@ -1,6 +1,7 @@
 import * as actionType from "./type";
 export const initialState = {
   openSideBar: false,
+  ipPopupData: false,
 };
 
 export const reducer = (state, action) => {
@@ -14,6 +15,18 @@ export const reducer = (state, action) => {
       return {
         ...state,
         openSideBar: false,
+      };
+
+    case actionType.POPUP_ON:
+      return {
+        ...state,
+        ipPopupData: true,
+      };
+
+    case actionType.POPUP_CLOSE:
+      return {
+        ...state,
+        ipPopupData: false,
       };
     default: {
       return state;

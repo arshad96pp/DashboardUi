@@ -5,6 +5,9 @@ import Like from '../style/images/Like.png'
 import Liked from '../style/images/Liked.png'
 import Send from '../style/images/Send.png'
 import I from '../style/images/ic.png'
+import PopupCard from './PopupCard'
+import { useAppContext } from '../context'
+import { createPortal } from 'react-dom'
 
 
 
@@ -14,6 +17,27 @@ import I from '../style/images/ic.png'
 function ProfileCard({id,image}) {
   const [selected,setSelected]=useState(0)
   const [liked,setLiked]=useState(false)
+  const [popupClicked,setPopupClicked]=useState(false)
+
+  const {state,Actions}=useAppContext()
+
+  const {isPopu}=Actions
+
+
+  const { ipPopupData } = state;
+
+
+  const handelPopup=()=>{
+    isPopu.isPopupOn()
+    setPopupClicked(true)
+  }
+
+  const closeHandelre=()=>{
+    setPopupClicked(false)
+  }
+
+  console.log(popupClicked);
+    
   return (
     <div className="profile-card" >
           <div 
@@ -27,7 +51,8 @@ function ProfileCard({id,image}) {
             </div>
           </div>
 
-          <Link to={`/profile/${id} `} className="profile-contant">
+          {/* <Link to={`/profile/${id} `} className="profile-contant"> */}
+          <div className="profile-contant" onClick={handelPopup}>
             <div className="name-section">
               <h1>Faheema</h1>
               <div className="profileIcons">
@@ -58,7 +83,15 @@ function ProfileCard({id,image}) {
                 <li key={index}><img src={item.icon} alt="" />{item.tags}</li>
               ))}
             </div>
-          </Link>
+            </div>
+
+          {/* </Link> */}
+
+          {popupClicked && (
+          <PopupCard idData={id} closeHandelre={closeHandelre}/>
+
+          )}
+
         </div>
   )
 }

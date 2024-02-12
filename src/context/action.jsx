@@ -10,5 +10,15 @@ export const action = (dispatch) => {
         dispatch({ type: actionType.CLOSE_SIDEBAR });
       },
     },
+
+    isPopu:{
+      isPopupOn:()=>{
+        dispatch({ type: actionType.POPUP_ON });
+
+      },
+      isPopupClose:()=>{
+        dispatch({ type: actionType.POPUP_CLOSE });
+      }
+    }
   };
 };

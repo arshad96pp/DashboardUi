@@ -6,11 +6,17 @@ import YoutubeLogo from '../style/images/youtube.png'
 import InstagramLogo from '../style/images/instagram.png'
 import FacebookLogo from '../style/images/facebook.png'
 import XLogo from '../style/images/xlogo.png'
+import { useAppContext } from "../context";
 
 
 
 
 function Home() {
+
+  const context = useAppContext();
+  const { Actions, state } = context;
+
+ 
 
   return (
     <div className="page-layout">
@@ -19,6 +25,10 @@ function Home() {
           <ProfileCard key={item.id} id={item.id} image={item.image} />
         ))}
       </div>
+
+
+
+
 
       <div className="users-card-row">
         <UserListCard title="Messages" />
