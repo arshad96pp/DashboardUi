@@ -2,14 +2,19 @@ import React from 'react'
 import { profileCard } from '../constance/profileCard';
 import { tagData } from '../constance/InrerestTag';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import { useAppContext } from '../context';
 
 
 function PopupCard({idData,setPopupClicked}) {
+
+  const {state,Actions}=useAppContext()
+  const {isPopu}=Actions
 
     const profilData=profileCard.find((item)=>item.id===idData)
 
 
     const closeHandelre=()=>{
+      isPopu.isPopupClose()
       setPopupClicked(false)
     }
 
