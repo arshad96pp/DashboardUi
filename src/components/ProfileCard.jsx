@@ -32,11 +32,8 @@ function ProfileCard({id,image}) {
     setPopupClicked(true)
   }
 
-  const closeHandelre=()=>{
-    setPopupClicked(false)
-  }
+ 
 
-  console.log(popupClicked);
     
   return (
     <div className="profile-card" >
@@ -88,7 +85,7 @@ function ProfileCard({id,image}) {
           {/* </Link> */}
 
           {popupClicked && (
-          <PopupCard idData={id} closeHandelre={closeHandelre}/>
+          <PopupCard idData={id} setPopupClicked={setPopupClicked}/>
 
           )}
 

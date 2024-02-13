@@ -4,37 +4,39 @@ import { tagData } from '../constance/InrerestTag';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 
-function PopupCard(idData,closeHandelre) {
+function PopupCard({idData,setPopupClicked}) {
 
-    const profilData=profileCard.find((item)=>item.id===idData.idData)
+    const profilData=profileCard.find((item)=>item.id===idData)
 
 
-  
+    const closeHandelre=()=>{
+      setPopupClicked(false)
+    }
 
   return (
     <div className='popup'>
-      <div className="closePopup"  >
-        {/* <span ><CloseRoundedIcon /></span> */}
-      </div>
-        <div className='popup-bg' style={{backgroundImage:`url(${profilData?.image})`}}></div>
-        <div className="popup-contant">
-            <h1>{profilData?.name}</h1>
+    <div className="closePopup">
+        <span onClick={closeHandelre}><CloseRoundedIcon /></span>
+    </div>
+    <div className='popup-bg' style={{ backgroundImage: `url(${profilData?.image})` }}></div>
+    <div className="popup-contant">
+        <h1>{profilData?.name}</h1>
 
-            <p>
+        <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad unde
             pariatur nesciunt consequuntur praesentium perspiciatis facere
-          </p>
+        </p>
 
-          <h1>Interests</h1>
+        <h1>Interests</h1>
 
-          <div className="tags-profile" >
+        <div className="tags-profile" >
             {tagData.map((item, index) => (
-              <li key={index}><img src={item.icon} alt="" />{item.tags}</li>
+                <li key={index}><img src={item.icon} alt="" />{item.tags}</li>
             ))}
-          </div>
-
         </div>
+
     </div>
+</div>
   )
 }
 
