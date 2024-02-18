@@ -1,0 +1,99 @@
+.setting-page {
+  width: 570px;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 20px;
+}
+.setting-page h2 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.setting-page h3 {
+  font-size: 16px;
+  font-weight: 300;
+}
+.full-name {
+  margin-bottom: 20px;
+}
+.email-address {
+  margin-bottom: 20px;
+}
+
+.phone-number {
+  margin-bottom: 30px;
+}
+.enable-section{
+    margin-bottom: 30px;
+}
+.enable-section h1{
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.enable-section h2{
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+
+.enable-contant{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.enable-contant p{
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 440px;
+}
+.enable-contant button{
+    padding: 10px;
+    background-color: red;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+@media (max-width:600px){
+    .setting-page{
+        width: 100%;
+    }
+
+    .setting-page h2 {
+        font-weight: 400;
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      .setting-page h3 {
+        font-size: 13px;
+        font-weight: 300;
+      }
+
+
+      .enable-section h1{
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .enable-section h2{
+        font-weight: 500;
+        font-size: 15px;
+        margin-bottom: 7px;
+    }
+
+
+    .enable-contant p{
+        font-size: 13px;
+        font-weight: 300;
+        max-width: 440px;
+    }
+}

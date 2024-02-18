@@ -13,3 +13,14 @@ export const profileCard=[
     {id:5,image:Avatar5,name:'Rizva'},
 
 ]
+
+export const dummyChatData=[
+    {
+        id:1,
+        message:'hello'
+    },
+    {
+        id:2,
+        message:'evidechangay'
+    }
+]

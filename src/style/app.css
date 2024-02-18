@@ -6,4 +6,8 @@
 @import './partials/userListCard.css';
 @import './partials/profilePage.css';
 @import './partials/popup.css';
-@import './partials/message.css'
+@import './partials/message.css';
+@import './partials/settings.css';
+@import './partials/explore.css';
+@import './partials/orgProfile.css';
+@import './partials/pricing.css';

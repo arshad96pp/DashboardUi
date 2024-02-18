@@ -1,0 +1,312 @@
+.profile-update {
+  display: flex;
+  flex-direction: column;
+}
+.profile-details-card {
+  width: 100%;
+  height: 280px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  align-items: center;
+  gap: 90px;
+  margin-bottom: 20px;
+}
+.image-container {
+  width: 25%;
+  height: 100%;
+  border-radius: 10px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.details-container {
+  width: 75%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.details-container .details {
+}
+.details-container h3,
+h2 {
+  margin-bottom: 15px;
+  display: flex;
+}
+.details-container h2 {
+  color: #596670;
+  font-size: 17px;
+}
+.details-container h4 {
+  margin-bottom: 13px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.details-container h3 span {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* button style */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.button-container .MuiButton-root {
+  border-color: #d91275 !important;
+  display: flex !important;
+  justify-content: start !important;
+  align-items: center !important;
+  color: black !important;
+  padding: 2px 5px !important;
+}
+.button-container .MuiButtonBase-root {
+  border-color: #d91275 !important;
+  display: flex !important;
+  justify-content: start !important;
+  align-items: center !important;
+  color: black !important;
+  padding: 2px 5px !important;
+}
+.button-container span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+.button-container .MuiSvgIcon-root {
+  font-size: 17px !important;
+  margin-right: 5px !important;
+}
+
+/* next section */
+.bio-section {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  gap: 30px;
+}
+.bio-left {
+  width: 30%;
+  height: auto;
+}
+.image-list {
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.image-list-scroll {
+  &::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+  }
+}
+.image-list h2 {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+}
+.image-list h2 span {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+}
+.tag-list {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+.tag-list h2 {
+  font-size: 15px;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tags li {
+  background: #d91275;
+  padding: 6px 20px;
+  border-radius: 15px;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tags li img {
+  width: 25px;
+  margin-right: 5px;
+}
+
+.bio-right {
+  width: 70%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.profile-bottom-section {
+  width: 100%;
+}
+
+.profile-bottomCard {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  height: auto;
+  padding: 20px;
+}
+
+.profile-bottomCard h1 {
+  font-size: 16px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.profile-bottomCard h2 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #9a9a9a;
+}
+.image-list-scroll {
+  width: 100% !important;
+}
+table {
+  width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+}
+table tr {
+  /* background: #ff7575; */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 13px;
+}
+table tr td {
+  width: 300px;
+}
+
+@media (max-width: 600px) {
+  .image-container {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .image-container img {
+    /* object-fit: cover; */
+    width: 100%;
+  }
+  .profile-details-card {
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 10px;
+    align-items: center;
+    gap: 10px;
+  }
+  .details-container {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .button-container {
+    margin-top: 10px;
+  }
+
+  /* next */
+  /* .profile-update {
+    display: flex;
+    flex-direction: column;
+  } */
+  .bio-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .bio-left {
+    width: 100%;
+    height: auto;
+  }
+
+  /* image list */
+  .image-list-scroll {
+    width: 100% !important;
+  }
+  /* tag */
+  .tags li {
+    background: #d91275;
+    padding: 6px 17px;
+    border-radius: 15px;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tags li img {
+    width: 20px;
+    margin-right: 5px;
+  }
+
+  .bio-right {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  table {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  table tr {
+    /* background: #ff7575; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  table tr td {
+    width: 100%;
+  }
+}

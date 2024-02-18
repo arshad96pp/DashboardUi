@@ -2,12 +2,12 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { profileCard } from "../constance/profileCard";
 import { tagData } from "../constance/InrerestTag";
-import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
-import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
-import CallRoundedIcon from '@mui/icons-material/CallRounded';
-import Like from '../style/images/Like.png'
-import Send from '../style/images/Send.png'
-
+import KeyboardArrowLeftRoundedIcon from "@mui/icons-material/KeyboardArrowLeftRounded";
+import KeyboardArrowRightRoundedIcon from "@mui/icons-material/KeyboardArrowRightRounded";
+import CallRoundedIcon from "@mui/icons-material/CallRounded";
+import Like from "../style/images/Like.png";
+import Send from "../style/images/Send.png";
+import CustomBtn from "../components/CustomBtn";
 
 function ProfilePage() {
   const { id } = useParams();
@@ -22,9 +22,12 @@ function ProfilePage() {
           style={{ backgroundImage: `url(${imageData?.image})` }}
         >
           <div className="arrowIcons">
-            <span><KeyboardArrowLeftRoundedIcon/></span>
-            <span><KeyboardArrowRightRoundedIcon/></span>
-
+            <span>
+              <KeyboardArrowLeftRoundedIcon />
+            </span>
+            <span>
+              <KeyboardArrowRightRoundedIcon />
+            </span>
           </div>
         </div>
         <div className="prifile-top-contant">
@@ -46,21 +49,32 @@ function ProfilePage() {
 
           <div className="tags-profile">
             {tagData.map((item, index) => (
-              <li key={index}><img src={item.icon} alt="" />{item.tags}</li>
+              <li key={index}>
+                <img src={item.icon} alt="" />
+                {item.tags}
+              </li>
             ))}
           </div>
 
           <div className="profile_btn">
             <div className="left_btn pBtn">
-              <h5><img src={Like} alt="" />Show Interest</h5>
+              <h5>
+                <img src={Like} alt="" />
+                Show Interest
+              </h5>
             </div>
             <div className="right_btn pBtn">
-              <h5><img src={Send} alt="" />Share Profile</h5>
+              <h5>
+                <img src={Send} alt="" />
+                Share Profile
+              </h5>
             </div>
           </div>
-          <div className="call_btn">
-            <h4><CallRoundedIcon/>Request Call</h4>
-          </div>
+
+          <CustomBtn>
+            <CallRoundedIcon />
+            Request Call
+          </CustomBtn>
         </div>
       </div>
       <div className="profile-bottom-section">
@@ -124,7 +138,6 @@ function ProfilePage() {
 
           <h2>Educational and Professional Information</h2>
 
-
           <table>
             <tr>
               <td>Education</td>
@@ -136,10 +149,7 @@ function ProfilePage() {
             </tr>
           </table>
 
-
-          <div className="call_btn">
-            <h4>Upgrade to See More</h4>
-          </div>
+          <CustomBtn>Upgrade to See More</CustomBtn>
         </div>
       </div>
     </div>

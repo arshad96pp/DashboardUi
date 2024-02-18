@@ -27,11 +27,7 @@ function ProfileCard({id,image}) {
   const { ipPopupData } = state;
 
 
-  const handelPopup=()=>{
-    isPopu.isPopupOn()
-    setPopupClicked(true)
-  }
-
+ 
  
 
     
@@ -48,8 +44,8 @@ function ProfileCard({id,image}) {
             </div>
           </div>
 
-          {/* <Link to={`/profile/${id} `} className="profile-contant"> */}
-          <div className="profile-contant" onClick={handelPopup}>
+          <Link to={`/profile/${id} `} className="profile-contant">
+          {/* <div className="profile-contant" onClick={handelPopup}> */}
             <div className="name-section">
               <h1>Faheema</h1>
               <div className="profileIcons">
@@ -80,9 +76,9 @@ function ProfileCard({id,image}) {
                 <li key={index}><img src={item.icon} alt="" />{item.tags}</li>
               ))}
             </div>
-            </div>
+            {/* </div> */}
 
-          {/* </Link> */}
+          </Link>
 
           {popupClicked && (
           <PopupCard idData={id} setPopupClicked={setPopupClicked}/>

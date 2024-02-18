@@ -36,11 +36,15 @@ function SideBar() {
   const url = window?.location?.pathname;
   const splitUrl = url.split("/");
   const urlId = splitUrl[2];
+
+  const handelProfilePage=()=>{
+    naviagate('/orgProfile')
+    }
   
   return (
     <div className={`${openSideBar ?'isOpenSidebar':'main-sidebar'}`}>
       <div className="sidebar">
-        <div className="image-user">
+        <div className="image-user" onClick={handelProfilePage}>
           <img src={User} alt="" />
         </div>
         <div className="sidebar-destails">
